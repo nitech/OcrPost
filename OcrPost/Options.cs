@@ -18,7 +18,7 @@ namespace OcrPost
         [Option('c', "config", Required = true, HelpText = "Config file that contains regexes")]
         public string Config { get; set; }
 
-        [Option('s', "simulate", Required = false, HelpText = "Just simulate. No writing files")]
+        [Option('i', "simulate", Required = false, HelpText = "Just simulate. No writing files")]
         public bool Simulate { get; set; }
     }
 }

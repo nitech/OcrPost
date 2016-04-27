@@ -50,9 +50,9 @@ namespace OcrPost
 
                             // save to destination - overwrite if exists
                             var dest = Path.Combine(options.DestinationFolder, file.Name); 
-                            File.WriteAllText(dest, text);
+                            if (!options.Simulate) File.WriteAllText(dest, text);
 
-                            Console.Write($"Processed: {file.Name}, saved in: {dest}");
+                            Console.WriteLine($"Processed: {file.Name}, saved in: {dest}");
                         }
 
                         Console.Read();
